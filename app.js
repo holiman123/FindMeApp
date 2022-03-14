@@ -9,7 +9,7 @@ const xss = require("xss-clean"); //XSS protection
 const hpp = require("hpp"); //protect against HTTP Parameter Pollution attacks
 
 const cookieParser = require("cookie-parser"); //- allows app to work with cookies
-// const AppError = require('./utils/appError'); //- this is custom error hanler, not for now
+// const AppError = require('./utils/appError'); //- this is custom error handler, not for now
 // const globalErrorHandler = require('./controllers/errorController');
 
 const app = express();

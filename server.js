@@ -6,7 +6,7 @@ const dotenv = require("dotenv"); //-For config files
 
 dotenv.config({ path: "./config.env" }); //- Import config
 const app = require("./app"); //- application separated form server (to ease manage of the server part)
-//DB conection establishement
+//DB connection establishment
 const DB = process.env.DATABASE.replace(
   "<PASSWORD>",
   process.env.DATABASE_PASSWORD
@@ -21,7 +21,7 @@ const server = app.listen(port, () => {
 });
 
 // Ignore this part for now, this is just simple handler of unhandled rejections
-// Somewhere there was one for unhandeled exeptions...
+// Somewhere there was one for unhandled exceptions...
 process.on("unhandledRejection", (err) => {
   console.log("UNHANDLED REJECTION! 💥 Shutting down...");
   console.log(err.name, err.message);
